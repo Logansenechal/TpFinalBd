@@ -16,6 +16,7 @@ namespace TravailPratique2bd
 
     public partial class ViewForm : Form
     {
+        private Panel borderBtn;
         private Table table;
         private Button currentButton;
         private DataTable dataTable;
@@ -25,6 +26,9 @@ namespace TravailPratique2bd
         {
             InitializeComponent();
             table = new Table();
+            borderBtn = new Panel();
+            borderBtn.Size = new Size(7, 90);
+            panel3.Controls.Add(borderBtn);
 
         }
         private void button1_Click(object sender, EventArgs e)
@@ -71,7 +75,12 @@ namespace TravailPratique2bd
                 {
                     DisableButton();
                     currentButton = (Button)sender;
-                    currentButton.BackColor = Color.MediumSlateBlue;
+                    currentButton.BackColor = Color.FromArgb(56, 56, 56);
+                    currentButton.ForeColor = Color.MediumSlateBlue;
+                    borderBtn.BackColor = Color.MediumSlateBlue;
+                    borderBtn.Location = new Point(0, currentButton.Location.Y);
+                    borderBtn.Visible = true;
+                    borderBtn.BringToFront();
                 }
             }
         }
@@ -79,7 +88,10 @@ namespace TravailPratique2bd
         {
             foreach (Control previousBtn in panel3.Controls)
             {
+
                 previousBtn.BackColor = Color.FromArgb(31, 31, 31);
+                borderBtn.BackColor = previousBtn.BackColor;
+                previousBtn.ForeColor = Color.White;
             }
         }
     }

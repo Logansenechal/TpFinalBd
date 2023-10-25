@@ -91,7 +91,7 @@
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-            dataGridView1.BackgroundColor = SystemColors.ControlDarkDark;
+            dataGridView1.BackgroundColor = Color.FromArgb(51, 51, 51);
             dataGridView1.BorderStyle = BorderStyle.None;
             dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             dataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
@@ -200,14 +200,14 @@
             // 
             button4.Dock = DockStyle.Top;
             button4.FlatAppearance.BorderSize = 0;
-            button4.FlatAppearance.MouseDownBackColor = Color.MediumSlateBlue;
-            button4.FlatAppearance.MouseOverBackColor = Color.Gray;
+            button4.FlatAppearance.MouseDownBackColor = Color.DimGray;
+            button4.FlatAppearance.MouseOverBackColor = Color.FromArgb(51, 51, 51);
             button4.FlatStyle = FlatStyle.Flat;
             button4.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             button4.ForeColor = Color.White;
-            button4.Location = new Point(0, 297);
+            button4.Location = new Point(0, 270);
             button4.Name = "button4";
-            button4.Size = new Size(200, 99);
+            button4.Size = new Size(200, 90);
             button4.TabIndex = 1;
             button4.Text = "Requête No.4";
             button4.UseVisualStyleBackColor = true;
@@ -217,14 +217,14 @@
             // 
             button3.Dock = DockStyle.Top;
             button3.FlatAppearance.BorderSize = 0;
-            button3.FlatAppearance.MouseDownBackColor = Color.MediumSlateBlue;
-            button3.FlatAppearance.MouseOverBackColor = Color.Gray;
+            button3.FlatAppearance.MouseDownBackColor = Color.DimGray;
+            button3.FlatAppearance.MouseOverBackColor = Color.FromArgb(51, 51, 51);
             button3.FlatStyle = FlatStyle.Flat;
             button3.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             button3.ForeColor = Color.White;
-            button3.Location = new Point(0, 198);
+            button3.Location = new Point(0, 180);
             button3.Name = "button3";
-            button3.Size = new Size(200, 99);
+            button3.Size = new Size(200, 90);
             button3.TabIndex = 2;
             button3.Text = "Requête No.3";
             button3.UseVisualStyleBackColor = true;
@@ -234,14 +234,14 @@
             // 
             button2.Dock = DockStyle.Top;
             button2.FlatAppearance.BorderSize = 0;
-            button2.FlatAppearance.MouseDownBackColor = Color.MediumSlateBlue;
-            button2.FlatAppearance.MouseOverBackColor = Color.Gray;
+            button2.FlatAppearance.MouseDownBackColor = Color.DimGray;
+            button2.FlatAppearance.MouseOverBackColor = Color.FromArgb(51, 51, 51);
             button2.FlatStyle = FlatStyle.Flat;
             button2.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             button2.ForeColor = Color.White;
-            button2.Location = new Point(0, 99);
+            button2.Location = new Point(0, 90);
             button2.Name = "button2";
-            button2.Size = new Size(200, 99);
+            button2.Size = new Size(200, 90);
             button2.TabIndex = 3;
             button2.Text = "Requête No.2";
             button2.UseVisualStyleBackColor = true;
@@ -251,14 +251,14 @@
             // 
             button1.Dock = DockStyle.Top;
             button1.FlatAppearance.BorderSize = 0;
-            button1.FlatAppearance.MouseDownBackColor = Color.MediumSlateBlue;
-            button1.FlatAppearance.MouseOverBackColor = Color.Gray;
+            button1.FlatAppearance.MouseDownBackColor = Color.DimGray;
+            button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(51, 51, 51);
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             button1.ForeColor = Color.White;
             button1.Location = new Point(0, 0);
             button1.Name = "button1";
-            button1.Size = new Size(200, 99);
+            button1.Size = new Size(200, 90);
             button1.TabIndex = 4;
             button1.Text = "Requête No.1";
             button1.UseVisualStyleBackColor = true;
