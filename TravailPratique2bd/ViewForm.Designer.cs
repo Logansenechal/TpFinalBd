@@ -61,9 +61,9 @@
             panel5.BackColor = Color.FromArgb(31, 31, 31);
             panel5.Controls.Add(resumeLabel);
             panel5.Dock = DockStyle.Bottom;
-            panel5.Location = new Point(200, 531);
+            panel5.Location = new Point(202, 531);
             panel5.Name = "panel5";
-            panel5.Size = new Size(903, 70);
+            panel5.Size = new Size(901, 70);
             panel5.TabIndex = 16;
             // 
             // resumeLabel
@@ -78,12 +78,12 @@
             // 
             // panel6
             // 
+            panel6.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panel6.BackColor = SystemColors.ControlDarkDark;
             panel6.Controls.Add(dataGridView1);
-            panel6.Dock = DockStyle.Fill;
-            panel6.Location = new Point(200, 78);
+            panel6.Location = new Point(208, 84);
             panel6.Name = "panel6";
-            panel6.Size = new Size(903, 523);
+            panel6.Size = new Size(890, 441);
             panel6.TabIndex = 17;
             // 
             // dataGridView1
@@ -107,7 +107,7 @@
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = Color.FromArgb(31, 31, 31);
             dataGridViewCellStyle2.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = Color.White;
+            dataGridViewCellStyle2.ForeColor = Color.Transparent;
             dataGridViewCellStyle2.SelectionBackColor = Color.MediumSlateBlue;
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
@@ -135,7 +135,7 @@
             dataGridViewCellStyle4.SelectionBackColor = Color.MediumPurple;
             dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(903, 523);
+            dataGridView1.Size = new Size(890, 441);
             dataGridView1.TabIndex = 1;
             // 
             // panel4
@@ -143,9 +143,9 @@
             panel4.BackColor = Color.MediumSlateBlue;
             panel4.Controls.Add(label7);
             panel4.Dock = DockStyle.Top;
-            panel4.Location = new Point(200, 0);
+            panel4.Location = new Point(202, 0);
             panel4.Name = "panel4";
-            panel4.Size = new Size(903, 78);
+            panel4.Size = new Size(901, 78);
             panel4.TabIndex = 15;
             // 
             // label7
@@ -155,7 +155,7 @@
             label7.ForeColor = Color.White;
             label7.Location = new Point(0, 0);
             label7.Name = "label7";
-            label7.Size = new Size(903, 78);
+            label7.Size = new Size(901, 78);
             label7.TabIndex = 0;
             label7.Text = "Afficher les requêtes";
             label7.TextAlign = ContentAlignment.MiddleCenter;
@@ -168,7 +168,7 @@
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(200, 601);
+            panel1.Size = new Size(202, 601);
             panel1.TabIndex = 14;
             // 
             // panel3
@@ -181,7 +181,7 @@
             panel3.Dock = DockStyle.Fill;
             panel3.Location = new Point(0, 78);
             panel3.Name = "panel3";
-            panel3.Size = new Size(200, 523);
+            panel3.Size = new Size(202, 523);
             panel3.TabIndex = 1;
             // 
             // label1
@@ -203,13 +203,13 @@
             button4.FlatAppearance.MouseDownBackColor = Color.DimGray;
             button4.FlatAppearance.MouseOverBackColor = Color.FromArgb(51, 51, 51);
             button4.FlatStyle = FlatStyle.Flat;
-            button4.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            button4.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             button4.ForeColor = Color.White;
-            button4.Location = new Point(0, 270);
+            button4.Location = new Point(0, 285);
             button4.Name = "button4";
-            button4.Size = new Size(200, 90);
+            button4.Size = new Size(202, 95);
             button4.TabIndex = 1;
-            button4.Text = "Requête No.4";
+            button4.Text = "Résultats requête 4";
             button4.UseVisualStyleBackColor = true;
             button4.Click += button4_Click;
             // 
@@ -220,13 +220,13 @@
             button3.FlatAppearance.MouseDownBackColor = Color.DimGray;
             button3.FlatAppearance.MouseOverBackColor = Color.FromArgb(51, 51, 51);
             button3.FlatStyle = FlatStyle.Flat;
-            button3.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            button3.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             button3.ForeColor = Color.White;
-            button3.Location = new Point(0, 180);
+            button3.Location = new Point(0, 190);
             button3.Name = "button3";
-            button3.Size = new Size(200, 90);
+            button3.Size = new Size(202, 95);
             button3.TabIndex = 2;
-            button3.Text = "Requête No.3";
+            button3.Text = "Résultats requête 3";
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click;
             // 
@@ -237,13 +237,13 @@
             button2.FlatAppearance.MouseDownBackColor = Color.DimGray;
             button2.FlatAppearance.MouseOverBackColor = Color.FromArgb(51, 51, 51);
             button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            button2.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             button2.ForeColor = Color.White;
-            button2.Location = new Point(0, 90);
+            button2.Location = new Point(0, 95);
             button2.Name = "button2";
-            button2.Size = new Size(200, 90);
+            button2.Size = new Size(202, 95);
             button2.TabIndex = 3;
-            button2.Text = "Requête No.2";
+            button2.Text = "Résultats requête 2";
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
@@ -254,13 +254,13 @@
             button1.FlatAppearance.MouseDownBackColor = Color.DimGray;
             button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(51, 51, 51);
             button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            button1.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             button1.ForeColor = Color.White;
             button1.Location = new Point(0, 0);
             button1.Name = "button1";
-            button1.Size = new Size(200, 90);
+            button1.Size = new Size(202, 95);
             button1.TabIndex = 4;
-            button1.Text = "Requête No.1";
+            button1.Text = "Résultats requête 1";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
@@ -271,7 +271,7 @@
             panel2.Dock = DockStyle.Top;
             panel2.Location = new Point(0, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(200, 78);
+            panel2.Size = new Size(202, 78);
             panel2.TabIndex = 0;
             // 
             // label6
@@ -281,7 +281,7 @@
             label6.ForeColor = Color.White;
             label6.Location = new Point(0, 0);
             label6.Name = "label6";
-            label6.Size = new Size(200, 78);
+            label6.Size = new Size(202, 78);
             label6.TabIndex = 0;
             label6.Text = "Travail Pratique 2";
             label6.TextAlign = ContentAlignment.MiddleCenter;
@@ -290,14 +290,16 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(51, 51, 51);
             ClientSize = new Size(1103, 601);
             Controls.Add(panel5);
             Controls.Add(panel6);
             Controls.Add(panel4);
             Controls.Add(panel1);
+            ForeColor = Color.Transparent;
             MinimumSize = new Size(1119, 620);
             Name = "ViewForm";
-            Text = "ViewForm";
+            Text = "Afficher les requêtes";
             panel5.ResumeLayout(false);
             panel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();

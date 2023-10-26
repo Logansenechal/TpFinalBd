@@ -1,19 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
+﻿
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
+//Déclaration de la classe Table
 public class Table
 
 {
-    private SqlDataAdapter dataAdapter;
-    private DataTable dataTable;
+    private SqlDataAdapter dataAdapter;//Crée un objet SqlDataAdapter pour récupérer les données de la base de données
+    private DataTable dataTable;//Crée un objet DataTable pour stocker les données
 
-
+    //Méthode pour afficher les données d'une table dans un dataGridView
     public void AfficherTable(string Table, string resume, Label resumeLabel, DataGridView dataGridView)
     {
+        //string de connection à la base de données
         string connectionString = "Server=CL5-WIN10-LS\\SQLEXPRESS;Database=travailpratique2;Integrated Security=True;";
 
         try
@@ -23,10 +22,10 @@ public class Table
                 // Ouvrir la connexion
                 connection.Open();
 
-                // Définir votre requête SQL
+                // Définit la requête SQL
                 string requeteSql = $"SELECT * FROM {Table}";
 
-
+                //Crée une instance de SqlDataAdapter pour exécuter la requête et récupérer les données
                 dataAdapter = new SqlDataAdapter(requeteSql, connection);
                 dataTable = new DataTable();
 
@@ -35,6 +34,7 @@ public class Table
 
                 // Lier le DataGridView au DataTable
                 dataGridView.DataSource = dataTable;
+                //Affiche le résumé de la requête dans resumeLabel 
                 resumeLabel.Text = resume;
             }
 
@@ -42,7 +42,8 @@ public class Table
         }
         catch (Exception ex)
         {
-            // Gérer les erreurs, par exemple, afficher un message d'erreur
+
+            // Afficher un message d'erreur si une exception est levée
             MessageBox.Show("Erreur : " + ex.Message, "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }

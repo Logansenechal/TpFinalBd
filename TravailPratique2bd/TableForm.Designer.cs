@@ -41,6 +41,7 @@
             // 
             // listView1
             // 
+            listView1.BackColor = Color.FromArgb(51, 51, 51);
             listView1.Dock = DockStyle.Fill;
             listView1.Location = new Point(0, 0);
             listView1.Name = "listView1";
@@ -70,12 +71,12 @@
             // 
             // panel6
             // 
+            panel6.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panel6.BackColor = SystemColors.ControlDarkDark;
             panel6.Controls.Add(dataGridView1);
-            panel6.Dock = DockStyle.Fill;
-            panel6.Location = new Point(200, 78);
+            panel6.Location = new Point(206, 84);
             panel6.Name = "panel6";
-            panel6.Size = new Size(745, 503);
+            panel6.Size = new Size(732, 421);
             panel6.TabIndex = 21;
             // 
             // dataGridView1
@@ -83,13 +84,13 @@
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-            dataGridView1.BackgroundColor = SystemColors.ControlDarkDark;
+            dataGridView1.BackgroundColor = Color.FromArgb(51, 51, 51);
             dataGridView1.BorderStyle = BorderStyle.None;
             dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             dataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.TopCenter;
             dataGridViewCellStyle1.BackColor = Color.FromArgb(46, 46, 46);
-            dataGridViewCellStyle1.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             dataGridViewCellStyle1.ForeColor = Color.White;
             dataGridViewCellStyle1.SelectionBackColor = Color.CadetBlue;
             dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
@@ -98,7 +99,7 @@
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = Color.FromArgb(31, 31, 31);
-            dataGridViewCellStyle2.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             dataGridViewCellStyle2.ForeColor = Color.White;
             dataGridViewCellStyle2.SelectionBackColor = Color.CadetBlue;
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
@@ -127,7 +128,7 @@
             dataGridViewCellStyle4.SelectionBackColor = Color.DarkTurquoise;
             dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(745, 503);
+            dataGridView1.Size = new Size(732, 421);
             dataGridView1.TabIndex = 1;
             // 
             // panel7
@@ -204,12 +205,12 @@
             // 
             button5.Dock = DockStyle.Top;
             button5.FlatAppearance.BorderSize = 0;
-            button5.FlatAppearance.MouseDownBackColor = Color.MediumSlateBlue;
-            button5.FlatAppearance.MouseOverBackColor = Color.Gray;
+            button5.FlatAppearance.MouseDownBackColor = Color.DimGray;
+            button5.FlatAppearance.MouseOverBackColor = Color.FromArgb(51, 51, 51);
             button5.FlatStyle = FlatStyle.Flat;
             button5.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             button5.ForeColor = Color.White;
-            button5.Location = new Point(0, 328);
+            button5.Location = new Point(0, 326);
             button5.Name = "button5";
             button5.Size = new Size(200, 82);
             button5.TabIndex = 8;
@@ -233,12 +234,12 @@
             // 
             button4.Dock = DockStyle.Top;
             button4.FlatAppearance.BorderSize = 0;
-            button4.FlatAppearance.MouseDownBackColor = Color.MediumSlateBlue;
-            button4.FlatAppearance.MouseOverBackColor = Color.Gray;
+            button4.FlatAppearance.MouseDownBackColor = Color.DimGray;
+            button4.FlatAppearance.MouseOverBackColor = Color.FromArgb(51, 51, 51);
             button4.FlatStyle = FlatStyle.Flat;
             button4.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             button4.ForeColor = Color.White;
-            button4.Location = new Point(0, 246);
+            button4.Location = new Point(0, 244);
             button4.Name = "button4";
             button4.Size = new Size(200, 82);
             button4.TabIndex = 1;
@@ -250,12 +251,12 @@
             // 
             button3.Dock = DockStyle.Top;
             button3.FlatAppearance.BorderSize = 0;
-            button3.FlatAppearance.MouseDownBackColor = Color.MediumSlateBlue;
-            button3.FlatAppearance.MouseOverBackColor = Color.Gray;
+            button3.FlatAppearance.MouseDownBackColor = Color.DimGray;
+            button3.FlatAppearance.MouseOverBackColor = Color.FromArgb(51, 51, 51);
             button3.FlatStyle = FlatStyle.Flat;
             button3.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             button3.ForeColor = Color.White;
-            button3.Location = new Point(0, 164);
+            button3.Location = new Point(0, 162);
             button3.Name = "button3";
             button3.Size = new Size(200, 82);
             button3.TabIndex = 2;
@@ -267,12 +268,12 @@
             // 
             button2.Dock = DockStyle.Top;
             button2.FlatAppearance.BorderSize = 0;
-            button2.FlatAppearance.MouseDownBackColor = Color.MediumSlateBlue;
-            button2.FlatAppearance.MouseOverBackColor = Color.Gray;
+            button2.FlatAppearance.MouseDownBackColor = Color.DimGray;
+            button2.FlatAppearance.MouseOverBackColor = Color.FromArgb(51, 51, 51);
             button2.FlatStyle = FlatStyle.Flat;
             button2.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             button2.ForeColor = Color.White;
-            button2.Location = new Point(0, 82);
+            button2.Location = new Point(0, 80);
             button2.Name = "button2";
             button2.Size = new Size(200, 82);
             button2.TabIndex = 3;
@@ -284,14 +285,14 @@
             // 
             button1.Dock = DockStyle.Top;
             button1.FlatAppearance.BorderSize = 0;
-            button1.FlatAppearance.MouseDownBackColor = Color.MediumSlateBlue;
-            button1.FlatAppearance.MouseOverBackColor = Color.Gray;
+            button1.FlatAppearance.MouseDownBackColor = Color.DimGray;
+            button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(51, 51, 51);
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             button1.ForeColor = Color.White;
             button1.Location = new Point(0, 0);
             button1.Name = "button1";
-            button1.Size = new Size(200, 82);
+            button1.Size = new Size(200, 80);
             button1.TabIndex = 4;
             button1.Text = "Joueur";
             button1.UseVisualStyleBackColor = true;
