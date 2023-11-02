@@ -7,30 +7,37 @@ namespace TravailPratique2bd
     //Déclaration de la class TableForm qui hérite de la classe Form
     public partial class TableForm : Form
     {
-        //AjouterForm? 
+        public string resume;
+       // public AjouterForm ajouterForm; 
+        public string tableChoisis;
         public Point mouseLocation;
         private Panel borderBtn;
         private Table table;
         private Button currentButton;
         private DataTable dataTable;
         private SqlDataAdapter dataAdapter;
-
+        
         //Constructeur de la classe TableForm
         public TableForm()
         {
             InitializeComponent();
             CustomSousMenu();
+            
+            
             table = new Table();
             borderBtn = new Panel();
             borderBtn.Size = new Size(2, 45);
             leftPanel.Controls.Add(borderBtn);
         }
+        
+        
 
         //Évenement suite au click du bouton 1 (Affiche joueur)
         private void buttonJoueur_Click(object sender, EventArgs e)
         {
-            string resume = "Affiche tout les joueurs.";//Résumé de la requête 
-
+            
+            resume = "Affiche tout les joueurs.";//Résumé de la requête 
+            tableChoisis = "joueur";
             ActivateButton(sender, panelJoueurSousMenu);//Appel la fonction ActivateButton pour le style du bouton lorsquil est activé
 
 
@@ -40,8 +47,8 @@ namespace TravailPratique2bd
         //Évenement suite au click du bouton 2 (Affiche tournoi)
         private void buttonTournoi_Click(object sender, EventArgs e)
         {
-            string resume = "Affiche tout les tounois.";//Résumé de la requête 
-
+            resume = "Affiche tout les tounois.";//Résumé de la requête 
+            tableChoisis = "tournoi";
             ActivateButton(sender, panelTournoiSousMenu);//Appel la fonction ActivateButton pour le style du bouton lorsquil est activé
 
             //table.AfficherTable("tournoi", resume, resumeLabel, dataGridView1);//Appel la fonction qui fait la requête SQL et qui l'ajoute dans le DataGridView
@@ -50,8 +57,8 @@ namespace TravailPratique2bd
         //Évenement suite au click du bouton 3 (Affiche epreuve)
         private void buttonEpreuve_Click(object sender, EventArgs e)
         {
-            string resume = "Affiche toutes les épreuves.";//Résumé de la requête 
-
+            resume = "Affiche toutes les épreuves.";//Résumé de la requête 
+            tableChoisis = "epreuve";
             ActivateButton(sender, panelEpreuveSousMenu);//Appel la fonction ActivateButton pour le style du bouton lorsquil est activé
 
             //table.AfficherTable("epreuve", resume, resumeLabel, dataGridView1);//Appel la fonction qui fait la requête SQL et qui l'ajoute dans le DataGridView
@@ -60,8 +67,8 @@ namespace TravailPratique2bd
         //Évenement suite au click du bouton 4 (Affiche match_tennis)
         private void buttonMatchTennis_Click(object sender, EventArgs e)
         {
-            string resume = "Affiche tout les matchs de tennis.";//Résumé de la requête 
-
+            resume = "Affiche tout les matchs de tennis.";//Résumé de la requête 
+            tableChoisis = "match_tennis";
             ActivateButton(sender, panelMatchTennisSousMenu);//Appel la fonction ActivateButton pour le style du bouton lorsquil est activé
 
             //table.AfficherTable("match_tennis", resume, resumeLabel, dataGridView1);//Appel la fonction qui fait la requête SQL et qui l'ajoute dans le DataGridView
@@ -70,8 +77,8 @@ namespace TravailPratique2bd
         //Évenement suite au click du bouton 5 (Affiche score_vainqueur)
         private void buttonScoreVainqueur_Click(object sender, EventArgs e)
         {
-            string resume = "Affiche tout les scores des vainqueurs.";//Résumé de la requête 
-
+            resume = "Affiche tout les scores des vainqueurs.";//Résumé de la requête 
+            tableChoisis = "score_vainqueur";
             ActivateButton(sender, panelSVSousMenu);//Appel la fonction ActivateButton pour le style du bouton lorsquil est activé
 
             // table.AfficherTable("score_vainqueur", resume, resumeLabel, dataGridView1);//Appel la fonction qui fait la requête SQL et qui l'ajoute dans le DataGridView
@@ -199,13 +206,14 @@ namespace TravailPratique2bd
 
         private void buttonAfficherJoueur_Click(object sender, EventArgs e)
         {
-
+            openChildForm(new FormAfficher(tableChoisis,resume));
             CacherSousMenu();
         }
 
         private void buttonAjouterJoueur_Click(object sender, EventArgs e)
         {
-            openChildForm(new AjouterForm());
+            
+            openChildForm(new AjouterForm(tableChoisis));
 
             CacherSousMenu();
         }
@@ -227,11 +235,15 @@ namespace TravailPratique2bd
 
         private void buttonAfficherTournoi_Click(object sender, EventArgs e)
         {
+            openChildForm(new FormAfficher(tableChoisis, resume));
             CacherSousMenu();
         }
 
         private void buttonAjouterTournoi_Click(object sender, EventArgs e)
         {
+            //ajouterForm = new AjouterForm();
+           // ajouterForm.tableChoisis = "tournoi";
+            openChildForm(new AjouterForm(tableChoisis));
             CacherSousMenu();
         }
 
@@ -252,11 +264,14 @@ namespace TravailPratique2bd
 
         private void buttonAfficherEpreuve_Click(object sender, EventArgs e)
         {
+            openChildForm(new FormAfficher(tableChoisis, resume));
             CacherSousMenu();
         }
 
         private void buttonAjouterEpreuve_Click(object sender, EventArgs e)
         {
+            
+            openChildForm(new AjouterForm(tableChoisis));
             CacherSousMenu();
         }
 
@@ -277,11 +292,15 @@ namespace TravailPratique2bd
 
         private void buttonAfficherMatchTennis_Click(object sender, EventArgs e)
         {
+            openChildForm(new FormAfficher(tableChoisis, resume));
             CacherSousMenu();
         }
 
         private void buttonAjouterMatchTennis_Click(object sender, EventArgs e)
         {
+            //ajouterForm = new AjouterForm();
+            //ajouterForm.tableChoisis = "match_tennis";
+            openChildForm(new AjouterForm(tableChoisis));
             CacherSousMenu();
         }
 
@@ -297,11 +316,15 @@ namespace TravailPratique2bd
 
         private void buttonAfficherSV_Click(object sender, EventArgs e)
         {
+            openChildForm(new FormAfficher(tableChoisis, resume));
             CacherSousMenu();
         }
 
         private void buttonAjouterSV_Click(object sender, EventArgs e)
         {
+            //ajouterForm = new AjouterForm();
+           // ajouterForm.tableChoisis = "score_vainqueurs";
+            openChildForm(new AjouterForm(tableChoisis));
             CacherSousMenu();
         }
 
