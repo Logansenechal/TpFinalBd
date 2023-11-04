@@ -1,6 +1,6 @@
 ﻿namespace TravailPratique2bd
 {
-    partial class TableForm
+    partial class GestionTablesForm
     {
         /// <summary>
         /// Required designer variable.
@@ -152,7 +152,6 @@
             // 
             // leftPanel
             // 
-            leftPanel.AutoScroll = true;
             leftPanel.BackColor = Color.FromArgb(46, 46, 46);
             leftPanel.Controls.Add(panelSVSousMenu);
             leftPanel.Controls.Add(buttonScoreVainqueurs);
@@ -181,7 +180,7 @@
             panelSVSousMenu.Dock = DockStyle.Top;
             panelSVSousMenu.Location = new Point(0, 985);
             panelSVSousMenu.Name = "panelSVSousMenu";
-            panelSVSousMenu.Size = new Size(233, 200);
+            panelSVSousMenu.Size = new Size(250, 200);
             panelSVSousMenu.TabIndex = 10;
             // 
             // buttonRechercherSCV
@@ -197,12 +196,12 @@
             buttonRechercherSCV.Location = new Point(0, 160);
             buttonRechercherSCV.Name = "buttonRechercherSCV";
             buttonRechercherSCV.Padding = new Padding(20, 0, 0, 0);
-            buttonRechercherSCV.Size = new Size(233, 40);
+            buttonRechercherSCV.Size = new Size(250, 40);
             buttonRechercherSCV.TabIndex = 5;
             buttonRechercherSCV.Text = "Rechercher";
             buttonRechercherSCV.TextAlign = ContentAlignment.MiddleLeft;
             buttonRechercherSCV.UseVisualStyleBackColor = false;
-            buttonRechercherSCV.Click += buttonRechercherSV_Click;
+            buttonRechercherSCV.Click += buttonRechercher_Click;
             // 
             // buttonSupprimerSCV
             // 
@@ -217,12 +216,12 @@
             buttonSupprimerSCV.Location = new Point(0, 120);
             buttonSupprimerSCV.Name = "buttonSupprimerSCV";
             buttonSupprimerSCV.Padding = new Padding(20, 0, 0, 0);
-            buttonSupprimerSCV.Size = new Size(233, 40);
+            buttonSupprimerSCV.Size = new Size(250, 40);
             buttonSupprimerSCV.TabIndex = 4;
             buttonSupprimerSCV.Text = "Supprimer";
             buttonSupprimerSCV.TextAlign = ContentAlignment.MiddleLeft;
             buttonSupprimerSCV.UseVisualStyleBackColor = false;
-            buttonSupprimerSCV.Click += buttonSupprimerSV_Click;
+            buttonSupprimerSCV.Click += buttonSupprimer_Click;
             // 
             // buttonModifierSCV
             // 
@@ -237,12 +236,12 @@
             buttonModifierSCV.Location = new Point(0, 80);
             buttonModifierSCV.Name = "buttonModifierSCV";
             buttonModifierSCV.Padding = new Padding(20, 0, 0, 0);
-            buttonModifierSCV.Size = new Size(233, 40);
+            buttonModifierSCV.Size = new Size(250, 40);
             buttonModifierSCV.TabIndex = 3;
             buttonModifierSCV.Text = "Modifier les résultats des sets";
             buttonModifierSCV.TextAlign = ContentAlignment.MiddleLeft;
             buttonModifierSCV.UseVisualStyleBackColor = false;
-            buttonModifierSCV.Click += buttonModifierSV_Click;
+            buttonModifierSCV.Click += buttonModifier_Click;
             // 
             // buttonAjouterSCV
             // 
@@ -257,12 +256,12 @@
             buttonAjouterSCV.Location = new Point(0, 40);
             buttonAjouterSCV.Name = "buttonAjouterSCV";
             buttonAjouterSCV.Padding = new Padding(20, 0, 0, 0);
-            buttonAjouterSCV.Size = new Size(233, 40);
+            buttonAjouterSCV.Size = new Size(250, 40);
             buttonAjouterSCV.TabIndex = 2;
             buttonAjouterSCV.Text = "Ajouter";
             buttonAjouterSCV.TextAlign = ContentAlignment.MiddleLeft;
             buttonAjouterSCV.UseVisualStyleBackColor = false;
-            buttonAjouterSCV.Click += buttonAjouterSV_Click;
+            buttonAjouterSCV.Click += buttonAjouter_Click;
             // 
             // buttonAfficherSCV
             // 
@@ -277,12 +276,12 @@
             buttonAfficherSCV.Location = new Point(0, 0);
             buttonAfficherSCV.Name = "buttonAfficherSCV";
             buttonAfficherSCV.Padding = new Padding(20, 0, 0, 0);
-            buttonAfficherSCV.Size = new Size(233, 40);
+            buttonAfficherSCV.Size = new Size(250, 40);
             buttonAfficherSCV.TabIndex = 1;
             buttonAfficherSCV.Text = "Afficher la table";
             buttonAfficherSCV.TextAlign = ContentAlignment.MiddleLeft;
             buttonAfficherSCV.UseVisualStyleBackColor = false;
-            buttonAfficherSCV.Click += buttonAfficherSV_Click;
+            buttonAfficherSCV.Click += buttonAfficher_Click;
             // 
             // buttonScoreVainqueurs
             // 
@@ -297,7 +296,7 @@
             buttonScoreVainqueurs.Location = new Point(0, 940);
             buttonScoreVainqueurs.Name = "buttonScoreVainqueurs";
             buttonScoreVainqueurs.Padding = new Padding(10, 0, 0, 0);
-            buttonScoreVainqueurs.Size = new Size(233, 45);
+            buttonScoreVainqueurs.Size = new Size(250, 45);
             buttonScoreVainqueurs.TabIndex = 9;
             buttonScoreVainqueurs.Text = "score_vainqueurs";
             buttonScoreVainqueurs.TextAlign = ContentAlignment.MiddleLeft;
@@ -314,7 +313,7 @@
             panelMatchTennisSousMenu.Dock = DockStyle.Top;
             panelMatchTennisSousMenu.Location = new Point(0, 780);
             panelMatchTennisSousMenu.Name = "panelMatchTennisSousMenu";
-            panelMatchTennisSousMenu.Size = new Size(233, 160);
+            panelMatchTennisSousMenu.Size = new Size(250, 160);
             panelMatchTennisSousMenu.TabIndex = 11;
             // 
             // buttonRechercherMatch
@@ -330,12 +329,12 @@
             buttonRechercherMatch.Location = new Point(0, 120);
             buttonRechercherMatch.Name = "buttonRechercherMatch";
             buttonRechercherMatch.Padding = new Padding(20, 0, 0, 0);
-            buttonRechercherMatch.Size = new Size(233, 40);
+            buttonRechercherMatch.Size = new Size(250, 40);
             buttonRechercherMatch.TabIndex = 10;
             buttonRechercherMatch.Text = "Rechercher";
             buttonRechercherMatch.TextAlign = ContentAlignment.MiddleLeft;
             buttonRechercherMatch.UseVisualStyleBackColor = false;
-            buttonRechercherMatch.Click += buttonRechercherMatchTennis_Click;
+            buttonRechercherMatch.Click += buttonRechercher_Click;
             // 
             // buttonSupprimerMatch
             // 
@@ -350,12 +349,12 @@
             buttonSupprimerMatch.Location = new Point(0, 80);
             buttonSupprimerMatch.Name = "buttonSupprimerMatch";
             buttonSupprimerMatch.Padding = new Padding(20, 0, 0, 0);
-            buttonSupprimerMatch.Size = new Size(233, 40);
+            buttonSupprimerMatch.Size = new Size(250, 40);
             buttonSupprimerMatch.TabIndex = 9;
             buttonSupprimerMatch.Text = "Supprimer";
             buttonSupprimerMatch.TextAlign = ContentAlignment.MiddleLeft;
             buttonSupprimerMatch.UseVisualStyleBackColor = false;
-            buttonSupprimerMatch.Click += buttonSupprimerMatchTennis_Click;
+            buttonSupprimerMatch.Click += buttonSupprimer_Click;
             // 
             // buttonAjouterMatch
             // 
@@ -370,12 +369,12 @@
             buttonAjouterMatch.Location = new Point(0, 40);
             buttonAjouterMatch.Name = "buttonAjouterMatch";
             buttonAjouterMatch.Padding = new Padding(20, 0, 0, 0);
-            buttonAjouterMatch.Size = new Size(233, 40);
+            buttonAjouterMatch.Size = new Size(250, 40);
             buttonAjouterMatch.TabIndex = 7;
             buttonAjouterMatch.Text = "Ajouter";
             buttonAjouterMatch.TextAlign = ContentAlignment.MiddleLeft;
             buttonAjouterMatch.UseVisualStyleBackColor = false;
-            buttonAjouterMatch.Click += buttonAjouterMatchTennis_Click;
+            buttonAjouterMatch.Click += buttonAjouter_Click;
             // 
             // buttonAfficherMatch
             // 
@@ -390,12 +389,12 @@
             buttonAfficherMatch.Location = new Point(0, 0);
             buttonAfficherMatch.Name = "buttonAfficherMatch";
             buttonAfficherMatch.Padding = new Padding(20, 0, 0, 0);
-            buttonAfficherMatch.Size = new Size(233, 40);
+            buttonAfficherMatch.Size = new Size(250, 40);
             buttonAfficherMatch.TabIndex = 6;
             buttonAfficherMatch.Text = "Afficher la table";
             buttonAfficherMatch.TextAlign = ContentAlignment.MiddleLeft;
             buttonAfficherMatch.UseVisualStyleBackColor = false;
-            buttonAfficherMatch.Click += buttonAfficherMatchTennis_Click;
+            buttonAfficherMatch.Click += buttonAfficher_Click;
             // 
             // buttonMatchTennis
             // 
@@ -410,7 +409,7 @@
             buttonMatchTennis.Location = new Point(0, 735);
             buttonMatchTennis.Name = "buttonMatchTennis";
             buttonMatchTennis.Padding = new Padding(10, 0, 0, 0);
-            buttonMatchTennis.Size = new Size(233, 45);
+            buttonMatchTennis.Size = new Size(250, 45);
             buttonMatchTennis.TabIndex = 7;
             buttonMatchTennis.Text = "match_tennis";
             buttonMatchTennis.TextAlign = ContentAlignment.MiddleLeft;
@@ -428,7 +427,7 @@
             panelEpreuveSousMenu.Dock = DockStyle.Top;
             panelEpreuveSousMenu.Location = new Point(0, 535);
             panelEpreuveSousMenu.Name = "panelEpreuveSousMenu";
-            panelEpreuveSousMenu.Size = new Size(233, 200);
+            panelEpreuveSousMenu.Size = new Size(250, 200);
             panelEpreuveSousMenu.TabIndex = 6;
             // 
             // buttonRechercherEpreuve
@@ -444,12 +443,12 @@
             buttonRechercherEpreuve.Location = new Point(0, 160);
             buttonRechercherEpreuve.Name = "buttonRechercherEpreuve";
             buttonRechercherEpreuve.Padding = new Padding(20, 0, 0, 0);
-            buttonRechercherEpreuve.Size = new Size(233, 40);
+            buttonRechercherEpreuve.Size = new Size(250, 40);
             buttonRechercherEpreuve.TabIndex = 5;
             buttonRechercherEpreuve.Text = "Rechercher";
             buttonRechercherEpreuve.TextAlign = ContentAlignment.MiddleLeft;
             buttonRechercherEpreuve.UseVisualStyleBackColor = false;
-            buttonRechercherEpreuve.Click += buttonRechercherEpreuve_Click;
+            buttonRechercherEpreuve.Click += buttonRechercher_Click;
             // 
             // buttonSupprimerEpreuve
             // 
@@ -464,12 +463,12 @@
             buttonSupprimerEpreuve.Location = new Point(0, 120);
             buttonSupprimerEpreuve.Name = "buttonSupprimerEpreuve";
             buttonSupprimerEpreuve.Padding = new Padding(20, 0, 0, 0);
-            buttonSupprimerEpreuve.Size = new Size(233, 40);
+            buttonSupprimerEpreuve.Size = new Size(250, 40);
             buttonSupprimerEpreuve.TabIndex = 4;
             buttonSupprimerEpreuve.Text = "Supprimer";
             buttonSupprimerEpreuve.TextAlign = ContentAlignment.MiddleLeft;
             buttonSupprimerEpreuve.UseVisualStyleBackColor = false;
-            buttonSupprimerEpreuve.Click += buttonSupprimerEpreuve_Click;
+            buttonSupprimerEpreuve.Click += buttonSupprimer_Click;
             // 
             // buttonModifierEpreuve
             // 
@@ -484,12 +483,12 @@
             buttonModifierEpreuve.Location = new Point(0, 80);
             buttonModifierEpreuve.Name = "buttonModifierEpreuve";
             buttonModifierEpreuve.Padding = new Padding(20, 0, 0, 0);
-            buttonModifierEpreuve.Size = new Size(233, 40);
+            buttonModifierEpreuve.Size = new Size(250, 40);
             buttonModifierEpreuve.TabIndex = 3;
             buttonModifierEpreuve.Text = "Modifier le type";
             buttonModifierEpreuve.TextAlign = ContentAlignment.MiddleLeft;
             buttonModifierEpreuve.UseVisualStyleBackColor = false;
-            buttonModifierEpreuve.Click += buttonModifierEpreuve_Click;
+            buttonModifierEpreuve.Click += buttonModifier_Click;
             // 
             // buttonAjouterEpreuve
             // 
@@ -504,12 +503,12 @@
             buttonAjouterEpreuve.Location = new Point(0, 40);
             buttonAjouterEpreuve.Name = "buttonAjouterEpreuve";
             buttonAjouterEpreuve.Padding = new Padding(20, 0, 0, 0);
-            buttonAjouterEpreuve.Size = new Size(233, 40);
+            buttonAjouterEpreuve.Size = new Size(250, 40);
             buttonAjouterEpreuve.TabIndex = 2;
             buttonAjouterEpreuve.Text = "Ajouter";
             buttonAjouterEpreuve.TextAlign = ContentAlignment.MiddleLeft;
             buttonAjouterEpreuve.UseVisualStyleBackColor = false;
-            buttonAjouterEpreuve.Click += buttonAjouterEpreuve_Click;
+            buttonAjouterEpreuve.Click += buttonAjouter_Click;
             // 
             // buttonAfficherEpreuve
             // 
@@ -524,12 +523,12 @@
             buttonAfficherEpreuve.Location = new Point(0, 0);
             buttonAfficherEpreuve.Name = "buttonAfficherEpreuve";
             buttonAfficherEpreuve.Padding = new Padding(20, 0, 0, 0);
-            buttonAfficherEpreuve.Size = new Size(233, 40);
+            buttonAfficherEpreuve.Size = new Size(250, 40);
             buttonAfficherEpreuve.TabIndex = 1;
             buttonAfficherEpreuve.Text = "Afficher la table";
             buttonAfficherEpreuve.TextAlign = ContentAlignment.MiddleLeft;
             buttonAfficherEpreuve.UseVisualStyleBackColor = false;
-            buttonAfficherEpreuve.Click += buttonAfficherEpreuve_Click;
+            buttonAfficherEpreuve.Click += buttonAfficher_Click;
             // 
             // buttonEpreuve
             // 
@@ -544,7 +543,7 @@
             buttonEpreuve.Location = new Point(0, 490);
             buttonEpreuve.Name = "buttonEpreuve";
             buttonEpreuve.Padding = new Padding(10, 0, 0, 0);
-            buttonEpreuve.Size = new Size(233, 45);
+            buttonEpreuve.Size = new Size(250, 45);
             buttonEpreuve.TabIndex = 5;
             buttonEpreuve.Text = "Epreuve";
             buttonEpreuve.TextAlign = ContentAlignment.MiddleLeft;
@@ -562,7 +561,7 @@
             panelTournoiSousMenu.Dock = DockStyle.Top;
             panelTournoiSousMenu.Location = new Point(0, 290);
             panelTournoiSousMenu.Name = "panelTournoiSousMenu";
-            panelTournoiSousMenu.Size = new Size(233, 200);
+            panelTournoiSousMenu.Size = new Size(250, 200);
             panelTournoiSousMenu.TabIndex = 4;
             // 
             // buttonRechercherTournoi
@@ -578,12 +577,12 @@
             buttonRechercherTournoi.Location = new Point(0, 160);
             buttonRechercherTournoi.Name = "buttonRechercherTournoi";
             buttonRechercherTournoi.Padding = new Padding(20, 0, 0, 0);
-            buttonRechercherTournoi.Size = new Size(233, 40);
+            buttonRechercherTournoi.Size = new Size(250, 40);
             buttonRechercherTournoi.TabIndex = 5;
             buttonRechercherTournoi.Text = "Rechercher";
             buttonRechercherTournoi.TextAlign = ContentAlignment.MiddleLeft;
             buttonRechercherTournoi.UseVisualStyleBackColor = false;
-            buttonRechercherTournoi.Click += buttonRechercherTournoi_Click;
+            buttonRechercherTournoi.Click += buttonRechercher_Click;
             // 
             // buttonSupprimerTournoi
             // 
@@ -598,12 +597,12 @@
             buttonSupprimerTournoi.Location = new Point(0, 120);
             buttonSupprimerTournoi.Name = "buttonSupprimerTournoi";
             buttonSupprimerTournoi.Padding = new Padding(20, 0, 0, 0);
-            buttonSupprimerTournoi.Size = new Size(233, 40);
+            buttonSupprimerTournoi.Size = new Size(250, 40);
             buttonSupprimerTournoi.TabIndex = 4;
             buttonSupprimerTournoi.Text = "Supprimer";
             buttonSupprimerTournoi.TextAlign = ContentAlignment.MiddleLeft;
             buttonSupprimerTournoi.UseVisualStyleBackColor = false;
-            buttonSupprimerTournoi.Click += buttonSupprimerTournoi_Click;
+            buttonSupprimerTournoi.Click += buttonSupprimer_Click;
             // 
             // buttonModifierTournoi
             // 
@@ -618,12 +617,12 @@
             buttonModifierTournoi.Location = new Point(0, 80);
             buttonModifierTournoi.Name = "buttonModifierTournoi";
             buttonModifierTournoi.Padding = new Padding(20, 0, 0, 0);
-            buttonModifierTournoi.Size = new Size(233, 40);
+            buttonModifierTournoi.Size = new Size(250, 40);
             buttonModifierTournoi.TabIndex = 3;
             buttonModifierTournoi.Text = "Modifier le nom d'un tournoi";
             buttonModifierTournoi.TextAlign = ContentAlignment.MiddleLeft;
             buttonModifierTournoi.UseVisualStyleBackColor = false;
-            buttonModifierTournoi.Click += buttonModifierTournoi_Click;
+            buttonModifierTournoi.Click += buttonModifier_Click;
             // 
             // buttonAjouterTournoi
             // 
@@ -638,12 +637,12 @@
             buttonAjouterTournoi.Location = new Point(0, 40);
             buttonAjouterTournoi.Name = "buttonAjouterTournoi";
             buttonAjouterTournoi.Padding = new Padding(20, 0, 0, 0);
-            buttonAjouterTournoi.Size = new Size(233, 40);
+            buttonAjouterTournoi.Size = new Size(250, 40);
             buttonAjouterTournoi.TabIndex = 2;
             buttonAjouterTournoi.Text = "Ajouter";
             buttonAjouterTournoi.TextAlign = ContentAlignment.MiddleLeft;
             buttonAjouterTournoi.UseVisualStyleBackColor = false;
-            buttonAjouterTournoi.Click += buttonAjouterTournoi_Click;
+            buttonAjouterTournoi.Click += buttonAjouter_Click;
             // 
             // buttonAfficherTournoi
             // 
@@ -658,12 +657,12 @@
             buttonAfficherTournoi.Location = new Point(0, 0);
             buttonAfficherTournoi.Name = "buttonAfficherTournoi";
             buttonAfficherTournoi.Padding = new Padding(20, 0, 0, 0);
-            buttonAfficherTournoi.Size = new Size(233, 40);
+            buttonAfficherTournoi.Size = new Size(250, 40);
             buttonAfficherTournoi.TabIndex = 1;
             buttonAfficherTournoi.Text = "Afficher la table";
             buttonAfficherTournoi.TextAlign = ContentAlignment.MiddleLeft;
             buttonAfficherTournoi.UseVisualStyleBackColor = false;
-            buttonAfficherTournoi.Click += buttonAfficherTournoi_Click;
+            buttonAfficherTournoi.Click += buttonAfficher_Click;
             // 
             // buttonTournoi
             // 
@@ -678,7 +677,7 @@
             buttonTournoi.Location = new Point(0, 245);
             buttonTournoi.Name = "buttonTournoi";
             buttonTournoi.Padding = new Padding(10, 0, 0, 0);
-            buttonTournoi.Size = new Size(233, 45);
+            buttonTournoi.Size = new Size(250, 45);
             buttonTournoi.TabIndex = 3;
             buttonTournoi.Text = "Tournoi";
             buttonTournoi.TextAlign = ContentAlignment.MiddleLeft;
@@ -696,7 +695,7 @@
             panelJoueurSousMenu.Dock = DockStyle.Top;
             panelJoueurSousMenu.Location = new Point(0, 45);
             panelJoueurSousMenu.Name = "panelJoueurSousMenu";
-            panelJoueurSousMenu.Size = new Size(233, 200);
+            panelJoueurSousMenu.Size = new Size(250, 200);
             panelJoueurSousMenu.TabIndex = 2;
             // 
             // buttonRechercherJoueur
@@ -712,12 +711,12 @@
             buttonRechercherJoueur.Location = new Point(0, 160);
             buttonRechercherJoueur.Name = "buttonRechercherJoueur";
             buttonRechercherJoueur.Padding = new Padding(20, 0, 0, 0);
-            buttonRechercherJoueur.Size = new Size(233, 40);
+            buttonRechercherJoueur.Size = new Size(250, 40);
             buttonRechercherJoueur.TabIndex = 5;
             buttonRechercherJoueur.Text = "Rechercher";
             buttonRechercherJoueur.TextAlign = ContentAlignment.MiddleLeft;
             buttonRechercherJoueur.UseVisualStyleBackColor = false;
-            buttonRechercherJoueur.Click += buttonRechercherJoueur_Click;
+            buttonRechercherJoueur.Click += buttonRechercher_Click;
             // 
             // buttonSupprimerJoueur
             // 
@@ -732,12 +731,12 @@
             buttonSupprimerJoueur.Location = new Point(0, 120);
             buttonSupprimerJoueur.Name = "buttonSupprimerJoueur";
             buttonSupprimerJoueur.Padding = new Padding(20, 0, 0, 0);
-            buttonSupprimerJoueur.Size = new Size(233, 40);
+            buttonSupprimerJoueur.Size = new Size(250, 40);
             buttonSupprimerJoueur.TabIndex = 4;
             buttonSupprimerJoueur.Text = "Supprimer";
             buttonSupprimerJoueur.TextAlign = ContentAlignment.MiddleLeft;
             buttonSupprimerJoueur.UseVisualStyleBackColor = false;
-            buttonSupprimerJoueur.Click += buttonSupprimerJoueur_Click;
+            buttonSupprimerJoueur.Click += buttonSupprimer_Click;
             // 
             // button2
             // 
@@ -752,12 +751,12 @@
             button2.Location = new Point(0, 80);
             button2.Name = "button2";
             button2.Padding = new Padding(20, 0, 0, 0);
-            button2.Size = new Size(233, 40);
+            button2.Size = new Size(250, 40);
             button2.TabIndex = 3;
             button2.Text = "Modifier le nom et le prénom d'un joueur";
             button2.TextAlign = ContentAlignment.MiddleLeft;
             button2.UseVisualStyleBackColor = false;
-            button2.Click += buttonModifierJoueur_Click;
+            button2.Click += buttonModifier_Click;
             // 
             // buttonAjouterJoueur
             // 
@@ -772,12 +771,12 @@
             buttonAjouterJoueur.Location = new Point(0, 40);
             buttonAjouterJoueur.Name = "buttonAjouterJoueur";
             buttonAjouterJoueur.Padding = new Padding(20, 0, 0, 0);
-            buttonAjouterJoueur.Size = new Size(233, 40);
+            buttonAjouterJoueur.Size = new Size(250, 40);
             buttonAjouterJoueur.TabIndex = 2;
             buttonAjouterJoueur.Text = "Ajouter";
             buttonAjouterJoueur.TextAlign = ContentAlignment.MiddleLeft;
             buttonAjouterJoueur.UseVisualStyleBackColor = false;
-            buttonAjouterJoueur.Click += buttonAjouterJoueur_Click;
+            buttonAjouterJoueur.Click += buttonAjouter_Click;
             // 
             // buttonAfficherJoueur
             // 
@@ -792,12 +791,12 @@
             buttonAfficherJoueur.Location = new Point(0, 0);
             buttonAfficherJoueur.Name = "buttonAfficherJoueur";
             buttonAfficherJoueur.Padding = new Padding(20, 0, 0, 0);
-            buttonAfficherJoueur.Size = new Size(233, 40);
+            buttonAfficherJoueur.Size = new Size(250, 40);
             buttonAfficherJoueur.TabIndex = 1;
             buttonAfficherJoueur.Text = "Afficher la table";
             buttonAfficherJoueur.TextAlign = ContentAlignment.MiddleLeft;
             buttonAfficherJoueur.UseVisualStyleBackColor = false;
-            buttonAfficherJoueur.Click += buttonAfficherJoueur_Click;
+            buttonAfficherJoueur.Click += buttonAfficher_Click;
             // 
             // buttonJoueur
             // 
@@ -812,7 +811,7 @@
             buttonJoueur.Location = new Point(0, 0);
             buttonJoueur.Name = "buttonJoueur";
             buttonJoueur.Padding = new Padding(10, 0, 0, 0);
-            buttonJoueur.Size = new Size(233, 45);
+            buttonJoueur.Size = new Size(250, 45);
             buttonJoueur.TabIndex = 0;
             buttonJoueur.Text = "Joueur";
             buttonJoueur.TextAlign = ContentAlignment.MiddleLeft;
@@ -836,7 +835,7 @@
             buttonAfficherMatchTennis.Text = "Afficher la table";
             buttonAfficherMatchTennis.TextAlign = ContentAlignment.MiddleLeft;
             buttonAfficherMatchTennis.UseVisualStyleBackColor = true;
-            buttonAfficherMatchTennis.Click += buttonAfficherMatchTennis_Click;
+            buttonAfficherMatchTennis.Click += buttonAfficher_Click;
             // 
             // panelGestion
             // 
@@ -846,7 +845,7 @@
             panelGestion.Size = new Size(711, 576);
             panelGestion.TabIndex = 3;
             // 
-            // TableForm
+            // GestionTablesForm
             // 
             BackColor = Color.FromArgb(51, 51, 51);
             ClientSize = new Size(961, 607);
@@ -855,7 +854,7 @@
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             MinimumSize = new Size(961, 607);
-            Name = "TableForm";
+            Name = "GestionTablesForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Afficher les tables";
             panel1.ResumeLayout(false);

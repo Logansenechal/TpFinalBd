@@ -5,10 +5,10 @@ using TravailPratiqueFinal;
 namespace TravailPratique2bd
 {
     //Déclaration de la class TableForm qui hérite de la classe Form
-    public partial class TableForm : Form
+    public partial class GestionTablesForm : Form
     {
         public string resume;
-       // public AjouterForm ajouterForm; 
+        // public AjouterForm ajouterForm; 
         public string tableChoisis;
         public Point mouseLocation;
         private Panel borderBtn;
@@ -16,26 +16,26 @@ namespace TravailPratique2bd
         private Button currentButton;
         private DataTable dataTable;
         private SqlDataAdapter dataAdapter;
-        
+
         //Constructeur de la classe TableForm
-        public TableForm()
+        public GestionTablesForm()
         {
             InitializeComponent();
             CustomSousMenu();
-            
-            
+
+
             table = new Table();
             borderBtn = new Panel();
             borderBtn.Size = new Size(2, 45);
             leftPanel.Controls.Add(borderBtn);
         }
-        
-        
+
+
 
         //Évenement suite au click du bouton 1 (Affiche joueur)
         private void buttonJoueur_Click(object sender, EventArgs e)
         {
-            
+
             resume = "Affiche tout les joueurs.";//Résumé de la requête 
             tableChoisis = "joueur";
             ActivateButton(sender, panelJoueurSousMenu);//Appel la fonction ActivateButton pour le style du bouton lorsquil est activé
@@ -161,20 +161,7 @@ namespace TravailPratique2bd
             }
         }
 
-        private void panel4_Paint(object sender, PaintEventArgs e)
-        {
 
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
         private void CustomSousMenu()
         {
             panelJoueurSousMenu.Visible = false;
@@ -204,144 +191,39 @@ namespace TravailPratique2bd
             }
         }
 
-        private void buttonAfficherJoueur_Click(object sender, EventArgs e)
-        {
-            openChildForm(new FormAfficher(tableChoisis,resume));
-            CacherSousMenu();
-        }
-
-        private void buttonAjouterJoueur_Click(object sender, EventArgs e)
-        {
-            
-            openChildForm(new AjouterForm(tableChoisis));
-
-            CacherSousMenu();
-        }
-
-        private void buttonModifierJoueur_Click(object sender, EventArgs e)
-        {
-            CacherSousMenu();
-        }
-
-        private void buttonSupprimerJoueur_Click(object sender, EventArgs e)
-        {
-            CacherSousMenu();
-        }
-
-        private void buttonRechercherJoueur_Click(object sender, EventArgs e)
-        {
-            CacherSousMenu();
-        }
-
-        private void buttonAfficherTournoi_Click(object sender, EventArgs e)
+        private void buttonAfficher_Click(object sender, EventArgs e)
         {
             openChildForm(new FormAfficher(tableChoisis, resume));
             CacherSousMenu();
         }
 
-        private void buttonAjouterTournoi_Click(object sender, EventArgs e)
+        private void buttonAjouter_Click(object sender, EventArgs e)
         {
-            //ajouterForm = new AjouterForm();
-           // ajouterForm.tableChoisis = "tournoi";
+
             openChildForm(new AjouterForm(tableChoisis));
+
             CacherSousMenu();
         }
 
-        private void buttonModifierTournoi_Click(object sender, EventArgs e)
+        private void buttonModifier_Click(object sender, EventArgs e)
+        {
+            openChildForm(new ModifierForm(tableChoisis));
+            CacherSousMenu();
+        }
+
+        private void buttonSupprimer_Click(object sender, EventArgs e)
         {
             CacherSousMenu();
         }
 
-        private void buttonSupprimerTournoi_Click(object sender, EventArgs e)
+        private void buttonRechercher_Click(object sender, EventArgs e)
         {
             CacherSousMenu();
         }
 
-        private void buttonRechercherTournoi_Click(object sender, EventArgs e)
-        {
-            CacherSousMenu();
-        }
 
-        private void buttonAfficherEpreuve_Click(object sender, EventArgs e)
-        {
-            openChildForm(new FormAfficher(tableChoisis, resume));
-            CacherSousMenu();
-        }
 
-        private void buttonAjouterEpreuve_Click(object sender, EventArgs e)
-        {
-            
-            openChildForm(new AjouterForm(tableChoisis));
-            CacherSousMenu();
-        }
 
-        private void buttonModifierEpreuve_Click(object sender, EventArgs e)
-        {
-            CacherSousMenu();
-        }
-
-        private void buttonSupprimerEpreuve_Click(object sender, EventArgs e)
-        {
-            CacherSousMenu();
-        }
-
-        private void buttonRechercherEpreuve_Click(object sender, EventArgs e)
-        {
-            CacherSousMenu();
-        }
-
-        private void buttonAfficherMatchTennis_Click(object sender, EventArgs e)
-        {
-            openChildForm(new FormAfficher(tableChoisis, resume));
-            CacherSousMenu();
-        }
-
-        private void buttonAjouterMatchTennis_Click(object sender, EventArgs e)
-        {
-            //ajouterForm = new AjouterForm();
-            //ajouterForm.tableChoisis = "match_tennis";
-            openChildForm(new AjouterForm(tableChoisis));
-            CacherSousMenu();
-        }
-
-        private void buttonSupprimerMatchTennis_Click(object sender, EventArgs e)
-        {
-            CacherSousMenu();
-        }
-
-        private void buttonRechercherMatchTennis_Click(object sender, EventArgs e)
-        {
-            CacherSousMenu();
-        }
-
-        private void buttonAfficherSV_Click(object sender, EventArgs e)
-        {
-            openChildForm(new FormAfficher(tableChoisis, resume));
-            CacherSousMenu();
-        }
-
-        private void buttonAjouterSV_Click(object sender, EventArgs e)
-        {
-            //ajouterForm = new AjouterForm();
-           // ajouterForm.tableChoisis = "score_vainqueurs";
-            openChildForm(new AjouterForm(tableChoisis));
-            CacherSousMenu();
-        }
-
-        private void buttonModifierSV_Click(object sender, EventArgs e)
-        {
-            CacherSousMenu();
-        }
-
-        private void buttonSupprimerSV_Click(object sender, EventArgs e)
-        {
-            CacherSousMenu();
-        }
-
-        private void buttonRechercherSV_Click(object sender, EventArgs e)
-        {
-            CacherSousMenu();
-        }
         private Form formActif = null;
         private void openChildForm(Form form)
         {
@@ -355,6 +237,8 @@ namespace TravailPratique2bd
             form.BringToFront();
             form.Show();
         }
+
+
     }
 }
 

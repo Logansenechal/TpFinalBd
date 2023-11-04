@@ -41,16 +41,17 @@
             // 
             // panel1
             // 
-            panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panel1.Controls.Add(dataGridView1);
-            panel1.Location = new Point(5, 62);
+            panel1.Dock = DockStyle.Top;
+            panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(706, 430);
+            panel1.Size = new Size(711, 492);
             panel1.TabIndex = 0;
             // 
             // dataGridView1
             // 
             dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dataGridView1.BackgroundColor = Color.FromArgb(51, 51, 51);
@@ -61,7 +62,7 @@
             dataGridViewCellStyle1.BackColor = Color.FromArgb(46, 46, 46);
             dataGridViewCellStyle1.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             dataGridViewCellStyle1.ForeColor = Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = Color.MediumSlateBlue;
+            dataGridViewCellStyle1.SelectionBackColor = Color.CadetBlue;
             dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
@@ -70,11 +71,10 @@
             dataGridViewCellStyle2.BackColor = Color.FromArgb(31, 31, 31);
             dataGridViewCellStyle2.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             dataGridViewCellStyle2.ForeColor = Color.Transparent;
-            dataGridViewCellStyle2.SelectionBackColor = Color.MediumSlateBlue;
+            dataGridViewCellStyle2.SelectionBackColor = Color.CadetBlue;
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
             dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
-            dataGridView1.Dock = DockStyle.Fill;
             dataGridView1.EnableHeadersVisualStyles = false;
             dataGridView1.GridColor = Color.FromArgb(46, 46, 46);
             dataGridView1.Location = new Point(0, 0);
@@ -85,7 +85,7 @@
             dataGridViewCellStyle3.BackColor = Color.FromArgb(31, 31, 31);
             dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             dataGridViewCellStyle3.ForeColor = Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = Color.MediumSlateBlue;
+            dataGridViewCellStyle3.SelectionBackColor = Color.CadetBlue;
             dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
             dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
@@ -94,10 +94,10 @@
             dataGridViewCellStyle4.BackColor = Color.FromArgb(31, 31, 31);
             dataGridViewCellStyle4.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             dataGridViewCellStyle4.ForeColor = Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = Color.MediumPurple;
+            dataGridViewCellStyle4.SelectionBackColor = Color.LightSeaGreen;
             dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(706, 430);
+            dataGridView1.Size = new Size(711, 492);
             dataGridView1.TabIndex = 2;
             // 
             // labelResume

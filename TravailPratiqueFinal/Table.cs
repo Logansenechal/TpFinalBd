@@ -9,11 +9,13 @@ public class Table
     private SqlDataAdapter dataAdapter;//Crée un objet SqlDataAdapter pour récupérer les données de la base de données
     private DataTable dataTable;//Crée un objet DataTable pour stocker les données
 
+    public Table() { }
+
     //Méthode pour afficher les données d'une table dans un dataGridView
     public void AfficherTable(string Table, string resume, Label resumeLabel, DataGridView dataGridView)
     {
         //string de connection à la base de données
-        string connectionString = "Server=CL5-WIN10-LS\\SQLEXPRESS;Database=travailpratique2;Integrated Security=True;";
+        string connectionString = "Server=CL5-WIN10-LS\\SQLEXPRESS;Database=TravailPratiqueFinal;Integrated Security=True;";
 
         try
         {
