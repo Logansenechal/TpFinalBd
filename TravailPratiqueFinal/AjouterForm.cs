@@ -5,13 +5,14 @@ namespace TravailPratiqueFinal
 {
     public partial class AjouterForm : Form
     {
-        //public string tableChoisis;
-
+        public string table;
+        public string connectionString = "Server=CL5-WIN10-LS\\SQLEXPRESS;Database=travailpratique2;Integrated Security=True;";
         public AjouterForm(string tableChoisis)
         {
+            table = tableChoisis;
             InitializeComponent();
             label1.Text = $"Ajouter un(e) {tableChoisis}";
-            string connectionString = "Server=CL5-WIN10-LS\\SQLEXPRESS;Database=travailpratique2;Integrated Security=True;";
+            
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -32,21 +33,22 @@ namespace TravailPratiqueFinal
                             foreach (DataRow row in schemaTable.Rows)
                             {
                                 string columnName = row["ColumnName"].ToString();
-                                // bool isAutoIncrement = Convert.ToBoolean(row["IsIdentity"]);
+
                                 if (!firstColumn)
                                 {
-                                    if (isForeignKey(tableChoisis, columnName, connectionString))
+                                    if (isForeignKey(tableChoisis, columnName))
                                     {
                                         ComboBox comboBox = new ComboBox();
                                         comboBox.Name = "comboBox" + columnName;
                                         comboBox.Text = columnName;
-                                        comboBox.Location = new System.Drawing.Point(10 , 50+ (30 * (panel2.Controls.Count - 3)));
+                                        comboBox.Tag = columnName;
+                                        comboBox.Location = new System.Drawing.Point(10, 50 + (30 * (panel2.Controls.Count - 1)));
                                         comboBox.BackColor = Color.FromArgb(31, 31, 31);
                                         comboBox.Size = new Size(170, 18);
                                         comboBox.FlatStyle = FlatStyle.Flat;
                                         comboBox.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
                                         comboBox.ForeColor = Color.White;
-                                        fillCombobox(tableChoisis, columnName, connectionString, comboBox);
+                                        fillCombobox(tableChoisis, columnName, comboBox);
                                         panel2.Controls.Add(comboBox);
                                     }
                                     else
@@ -54,7 +56,8 @@ namespace TravailPratiqueFinal
                                         TextBox textBox = new TextBox();
                                         textBox.Name = "textBox" + columnName;
                                         textBox.PlaceholderText = columnName;
-                                        textBox.Location = new System.Drawing.Point(10 , 50+ (30 * (panel2.Controls.Count - 3)));
+                                        textBox.Tag = columnName;
+                                        textBox.Location = new System.Drawing.Point(10, 50 + (30 * (panel2.Controls.Count - 1)));
                                         textBox.Size = new Size(170, 18);
                                         textBox.BackColor = Color.FromArgb(31, 31, 31);
                                         textBox.BorderStyle = BorderStyle.FixedSingle;
@@ -66,6 +69,20 @@ namespace TravailPratiqueFinal
                                 }
                                 firstColumn = false;
                             }
+                            Button buttonAjouter = new Button();
+                            buttonAjouter.FlatAppearance.BorderColor = Color.CadetBlue;
+                            buttonAjouter.FlatAppearance.BorderSize = 2;
+                            buttonAjouter.FlatStyle = FlatStyle.Flat;
+                            buttonAjouter.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+                            buttonAjouter.ForeColor = Color.CadetBlue;
+                            buttonAjouter.Location = new Point(10, 50 + (30 * (panel2.Controls.Count - 1)));
+                            buttonAjouter.Name = "buttonAjouter";
+                            buttonAjouter.Size = new Size(111, 32);
+                            buttonAjouter.TabIndex = 0;
+                            buttonAjouter.Text = "Ajouter";
+                            buttonAjouter.UseVisualStyleBackColor = true;
+                            buttonAjouter.Click += buttonAjouter_Click;
+                            panel2.Controls.Add(buttonAjouter);
                         }
 
                     }
@@ -74,7 +91,7 @@ namespace TravailPratiqueFinal
             }
 
         }
-        public bool isForeignKey(string tableName, string columnName, string connectionString)
+        public bool isForeignKey(string tableName, string columnName)
         {
 
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -99,7 +116,36 @@ namespace TravailPratiqueFinal
                 }
             }
         }
-        public void fillCombobox(string tableName, string columnName, string connectionString, ComboBox comboBox)
+        public bool isTypeOk( string columnName, Control champ)
+        {
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                string requeteSQL = $"SELECT DATA_TYPE FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='{table}' AND COLUMN_NAME='{columnName}'";
+
+                using (SqlCommand commande = new SqlCommand(requeteSQL, connection))
+                {
+                    
+                    using (SqlDataReader reader = commande.ExecuteReader())
+                    {
+                        if (reader.Read()) {
+                            string dataType = reader["DATA_TYPE"].ToString();
+                            if (string.Equals(dataType, "varchar", StringComparison.OrdinalIgnoreCase)){
+                             
+                            }else if(string.Equals(dataType, "varchar", StringComparison.OrdinalIgnoreCase))
+                            {
+
+                            }
+                            //return string.Equals(dataType,type , StringComparison.OrdinalIgnoreCase);
+                         }
+
+                    }
+                }
+            }
+            return false;
+        }
+        public void fillCombobox(string tableName, string columnName, ComboBox comboBox)
         {
             comboBox.Items.Clear();
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -119,20 +165,64 @@ namespace TravailPratiqueFinal
 
         private void buttonAjouter_Click(object sender, EventArgs e)
         {
+            var listData = new List<string>();
+            var listColumn = new List<string>();
+           
 
-
-
-
-
-
-            //label2.Visible = true;
-            //label2.Text = $"Le joueur {textBox1.Text}, {textBox2.Text} a été ajouter à la table des joueurs";
-        }
-        /*
-                private void AjouterForm_Load(object sender, EventArgs e)
+            foreach (Control champ in panel2.Controls)
+            {
+                if (champ is TextBox || champ is ComboBox)
                 {
+                    if(isExpectedType("varchar",champ.Tag.ToString()))
+                    listData.Add($"'{champ.Text}'");
+                    listColumn.Add(champ.Tag.ToString());
+                }
+            }
+            var data = string.Join(",", listData);
+            var columns = string.Join(",", listColumn);
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                string requeteSQL = $"INSERT INTO {table} ({columns}) VALUES ({data})";
+                string sql = requeteSQL;
+                using (SqlCommand commande = new SqlCommand(requeteSQL, connection))
+                {
+                    
+
+                    Label message = new Label();
+                    message.Name = "labelMessage";
+                    
+
+                    message.Location = new System.Drawing.Point(10, 50 + (30 * (panel2.Controls.Count - 1)));
 
 
-                }*/
+
+                    message.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+                    message.ForeColor = Color.White;
+                    panel2.Controls.Add(message);
+                    int rowsAffected = commande.ExecuteNonQuery();
+                    if (rowsAffected > 0)
+                    {
+                        message.ForeColor = Color.Green;
+                        message.Text = $"Requête réussi: {sql}";
+
+                    }
+                    else
+                    {
+                        message.ForeColor = Color.Red;
+                        message.Text = $"Requêe échoué: {sql}";
+                    }
+
+
+
+
+
+
+
+                }
+                
+            }
+        }
     }
 }
