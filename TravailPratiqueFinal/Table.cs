@@ -13,7 +13,7 @@ public class Table
     public void AfficherTable(string Table, string resume, Label resumeLabel, DataGridView dataGridView)
     {
         //string de connection à la base de données
-        string connectionString = "Server=CL5-WIN10-LS\\SQLEXPRESS;Database=travailpratique2;Integrated Security=True;";
+        string connectionString = "Server=CL5-WIN10-LS\\SQLEXPRESS;Database=TravailPratiqueFinal;Integrated Security=True;";
 
         try
         {

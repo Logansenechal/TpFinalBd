@@ -29,10 +29,8 @@
         private void InitializeComponent()
         {
             panel2 = new Panel();
-            label2 = new Label();
             panel4 = new Panel();
             label1 = new Label();
-            buttonAjouter = new Button();
             panel2.SuspendLayout();
             panel4.SuspendLayout();
             SuspendLayout();
@@ -40,26 +38,12 @@
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(31, 31, 31);
-            panel2.Controls.Add(label2);
             panel2.Controls.Add(panel4);
-            panel2.Controls.Add(buttonAjouter);
             panel2.Dock = DockStyle.Fill;
             panel2.Location = new Point(0, 0);
             panel2.Name = "panel2";
             panel2.Size = new Size(711, 576);
             panel2.TabIndex = 3;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.ForeColor = Color.White;
-            label2.Location = new Point(12, 164);
-            label2.Name = "label2";
-            label2.Size = new Size(50, 20);
-            label2.TabIndex = 13;
-            label2.Text = "label2";
-            label2.Visible = false;
             // 
             // panel4
             // 
@@ -81,21 +65,6 @@
             label1.TabIndex = 0;
             label1.Text = "Ajouter un joueur";
             // 
-            // buttonAjouter
-            // 
-            buttonAjouter.FlatAppearance.BorderColor = Color.CadetBlue;
-            buttonAjouter.FlatAppearance.BorderSize = 2;
-            buttonAjouter.FlatStyle = FlatStyle.Flat;
-            buttonAjouter.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonAjouter.ForeColor = Color.CadetBlue;
-            buttonAjouter.Location = new Point(588, 87);
-            buttonAjouter.Name = "buttonAjouter";
-            buttonAjouter.Size = new Size(111, 32);
-            buttonAjouter.TabIndex = 0;
-            buttonAjouter.Text = "Ajouter";
-            buttonAjouter.UseVisualStyleBackColor = true;
-            buttonAjouter.Click += buttonAjouter_Click;
-            // 
             // AjouterForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -105,7 +74,6 @@
             Name = "AjouterForm";
             Text = "AfficherForm";
             panel2.ResumeLayout(false);
-            panel2.PerformLayout();
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
             ResumeLayout(false);
@@ -113,9 +81,7 @@
 
         #endregion
         private Panel panel2;
-        private Button buttonAjouter;
         private Panel panel4;
         private Label label1;
-        private Label label2;
     }
 }
