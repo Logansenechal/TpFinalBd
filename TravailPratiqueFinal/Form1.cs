@@ -7,7 +7,7 @@ namespace TravailPratique2bd
     public partial class Form1 : Form
     {
         public Point mouseLocation;
-        TableForm? table;//Déclaration de la Form qui va afficher les tables
+        GestionTablesForm? table;//Déclaration de la Form qui va afficher les tables
         ViewForm? requete;//Déclaration de la Form qui va afficher les requêtes
         public Form1()
         {
@@ -20,7 +20,7 @@ namespace TravailPratique2bd
             if (table == null)
             {
                 //Crée une instance de TableForm
-                table = new TableForm();
+                table = new GestionTablesForm();
             }
             //Affiche la Form TableForm
             table.ShowDialog();

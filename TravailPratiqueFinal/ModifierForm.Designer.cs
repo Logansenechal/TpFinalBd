@@ -1,6 +1,6 @@
 ﻿namespace TravailPratiqueFinal
 {
-    partial class FormAfficher
+    partial class ModifierForm
     {
         /// <summary>
         /// Required designer variable.
@@ -32,21 +32,32 @@
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            panel1 = new Panel();
+            panel2 = new Panel();
             dataGridView1 = new DataGridView();
-            labelResume = new Label();
-            panel1.SuspendLayout();
+            idLabel = new Label();
+            comboBox1 = new ComboBox();
+            panel4 = new Panel();
+            label1 = new Label();
+            label2 = new Label();
+            label3 = new Label();
+            panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            panel4.SuspendLayout();
             SuspendLayout();
             // 
-            // panel1
+            // panel2
             // 
-            panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            panel1.Controls.Add(dataGridView1);
-            panel1.Location = new Point(0, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(711, 492);
-            panel1.TabIndex = 0;
+            panel2.BackColor = Color.FromArgb(31, 31, 31);
+            panel2.Controls.Add(dataGridView1);
+            panel2.Controls.Add(idLabel);
+            panel2.Controls.Add(comboBox1);
+            panel2.Controls.Add(panel4);
+            panel2.Controls.Add(label2);
+            panel2.Dock = DockStyle.Fill;
+            panel2.Location = new Point(0, 0);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(711, 576);
+            panel2.TabIndex = 4;
             // 
             // dataGridView1
             // 
@@ -77,7 +88,7 @@
             dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             dataGridView1.EnableHeadersVisualStyles = false;
             dataGridView1.GridColor = Color.FromArgb(46, 46, 46);
-            dataGridView1.Location = new Point(0, 0);
+            dataGridView1.Location = new Point(12, 86);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
             dataGridView1.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
@@ -97,39 +108,93 @@
             dataGridViewCellStyle4.SelectionBackColor = Color.LightSeaGreen;
             dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(711, 492);
-            dataGridView1.TabIndex = 2;
+            dataGridView1.Size = new Size(687, 36);
+            dataGridView1.TabIndex = 17;
             // 
-            // labelResume
+            // idLabel
             // 
-            labelResume.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            labelResume.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            labelResume.ForeColor = Color.White;
-            labelResume.Location = new Point(5, 507);
-            labelResume.Name = "labelResume";
-            labelResume.Size = new Size(643, 51);
-            labelResume.TabIndex = 1;
+            idLabel.AutoSize = true;
+            idLabel.ForeColor = SystemColors.ControlLightLight;
+            idLabel.Location = new Point(20, 60);
+            idLabel.Name = "idLabel";
+            idLabel.Size = new Size(24, 15);
+            idLabel.TabIndex = 15;
+            idLabel.Text = "ID :";
             // 
-            // FormAfficher
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(50, 57);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(55, 23);
+            comboBox1.TabIndex = 14;
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            // 
+            // panel4
+            // 
+            panel4.Controls.Add(label3);
+            panel4.Controls.Add(label1);
+            panel4.Dock = DockStyle.Top;
+            panel4.Location = new Point(0, 0);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(711, 39);
+            panel4.TabIndex = 12;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = Color.Transparent;
+            label1.Location = new Point(12, 9);
+            label1.Name = "label1";
+            label1.Size = new Size(74, 21);
+            label1.TabIndex = 0;
+            label1.Text = "Modifier";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.ForeColor = Color.White;
+            label2.Location = new Point(0, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(52, 17);
+            label2.TabIndex = 13;
+            label2.Text = "dwdqw";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(0, 2);
+            label3.Name = "label3";
+            label3.Size = new Size(0, 15);
+            label3.TabIndex = 18;
+            // 
+            // ModifierForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(31, 31, 31);
             ClientSize = new Size(711, 576);
-            Controls.Add(labelResume);
-            Controls.Add(panel1);
-            FormBorderStyle = FormBorderStyle.None;
-            Name = "FormAfficher";
-            Text = "FormAfficher";
-            panel1.ResumeLayout(false);
+            Controls.Add(panel2);
+            Name = "ModifierForm";
+            Text = "ModifierForm";
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            panel4.ResumeLayout(false);
+            panel4.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Panel panel1;
+        private Panel panel2;
+        private Panel panel4;
+        private Label label1;
+        private Label label2;
+        private Label idLabel;
+        private ComboBox comboBox1;
         private DataGridView dataGridView1;
-        private Label labelResume;
+        private Label label3;
     }
 }

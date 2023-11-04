@@ -89,7 +89,6 @@ C:\Users\adminlocal\Desktop\TravailPratiqueFinal\TravailPratiqueFinal\obj\Debug\
 C:\Users\adminlocal\Desktop\TravailPratiqueFinal\TravailPratiqueFinal\obj\Debug\net6.0-windows\TravailPratiqueFinal.AjouterForm.resources
 C:\Users\adminlocal\Desktop\TravailPratiqueFinal\TravailPratiqueFinal\obj\Debug\net6.0-windows\TravailPratique2bd.Form1.resources
 C:\Users\adminlocal\Desktop\TravailPratiqueFinal\TravailPratiqueFinal\obj\Debug\net6.0-windows\TravailPratiqueFinal.Properties.Resources.resources
-C:\Users\adminlocal\Desktop\TravailPratiqueFinal\TravailPratiqueFinal\obj\Debug\net6.0-windows\TravailPratique2bd.TableForm.resources
 C:\Users\adminlocal\Desktop\TravailPratiqueFinal\TravailPratiqueFinal\obj\Debug\net6.0-windows\TravailPratique2bd.ViewForm.resources
 C:\Users\adminlocal\Desktop\TravailPratiqueFinal\TravailPratiqueFinal\obj\Debug\net6.0-windows\TravailPratiqueFinal.csproj.GenerateResource.cache
 C:\Users\adminlocal\Desktop\TravailPratiqueFinal\TravailPratiqueFinal\obj\Debug\net6.0-windows\TravailPratiqueFinal.GeneratedMSBuildEditorConfig.editorconfig
@@ -103,3 +102,6 @@ C:\Users\adminlocal\Desktop\TravailPratiqueFinal\TravailPratiqueFinal\obj\Debug\
 C:\Users\adminlocal\Desktop\TravailPratiqueFinal\TravailPratiqueFinal\obj\Debug\net6.0-windows\TravailPratiqueFinal.genruntimeconfig.cache
 C:\Users\adminlocal\Desktop\TravailPratiqueFinal\TravailPratiqueFinal\obj\Debug\net6.0-windows\ref\TravailPratiqueFinal.dll
 C:\Users\adminlocal\Desktop\TravailPratiqueFinal\TravailPratiqueFinal\obj\Debug\net6.0-windows\TravailPratiqueFinal.FormAfficher.resources
+C:\Users\adminlocal\Desktop\TravailPratiqueFinal\TravailPratiqueFinal\obj\Debug\net6.0-windows\TravailPratiqueFinal.ModifierForm.resources
+C:\Users\adminlocal\Desktop\TravailPratiqueFinal\TravailPratiqueFinal\obj\Debug\net6.0-windows\TravailPratique2bd.GestionTablesForm.resources
+C:\Users\adminlocal\Desktop\TravailPratiqueFinal\TravailPratiqueFinal\obj\Debug\net6.0-windows\TravailPratiqueFinal.SupprimerForm.resources

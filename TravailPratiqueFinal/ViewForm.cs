@@ -31,7 +31,7 @@ namespace TravailPratique2bd
 
             string resume = "Affiche les informations des joueuses vainqueures avec les scores du tournoi de Wimbledon avec l’année du tournoi.";//Résumé de la requête 
 
-            table.AfficherTable("requete1", resume, resumeLabel, dataGridView1);//Appel la fonction qui fait la requête SQL et qui l'ajoute dans le DataGridView
+            table.AfficherTable("requete1", dataGridView1,"1");//Appel la fonction qui fait la requête SQL et qui l'ajoute dans le DataGridView
 
         }
         //Évenement suite au click du bouton 2
@@ -39,7 +39,7 @@ namespace TravailPratique2bd
         {
             ActivateButton(sender);//Appel la fonction ActivateButton pour le style du bouton lorsquil est activé
             string resume = "Afficher tous les hommes qui ont participé au tournoi de Roland Garros.";//Résumé de la requête 
-            table.AfficherTable("requete2", resume, resumeLabel, dataGridView1);//Appel la fonction qui fait la requête SQL et qui l'ajoute dans le DataGridView
+            table.AfficherTable("requete2", dataGridView1,"1");//Appel la fonction qui fait la requête SQL et qui l'ajoute dans le DataGridView
 
 
         }
@@ -48,14 +48,14 @@ namespace TravailPratique2bd
         {
             ActivateButton(sender);//Appel la fonction ActivateButton pour le style du bouton lorsquil est activé
             string resume = "Afficher informations des joueurs vainqueurs avec les scores du tournoi de tous les tournois avec l’année du tournoi.";//Résumé de la requête 
-            table.AfficherTable("requete4", resume, resumeLabel, dataGridView1);//Appel la fonction qui fait la requête SQL et qui l'ajoute dans le DataGridView
+            table.AfficherTable("requete4", dataGridView1, "1");//Appel la fonction qui fait la requête SQL et qui l'ajoute dans le DataGridView
         }
         //Évenement suite au click du bouton 3
         private void button4_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);//Appel la fonction ActivateButton pour le style du bouton lorsquil est activé
             string resume = "Compter le nombre de participants par tournoi, année et sexe.";//Résumé de la requête 
-            table.AfficherTable("requete3", resume, resumeLabel, dataGridView1);//Appel la fonction qui fait la requête SQL et qui l'ajoute dans le DataGridView
+            table.AfficherTable("requete3", dataGridView1, "1");//Appel la fonction qui fait la requête SQL et qui l'ajoute dans le DataGridView
         }
 
 

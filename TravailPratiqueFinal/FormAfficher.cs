@@ -16,14 +16,15 @@ namespace TravailPratiqueFinal
         //TableForm tableform;
         Table table;
 
-        public FormAfficher(string tableChoisis,string resume)
+        public FormAfficher(string tableChoisis, string resume)
         {
             table = new Table();
             //tableform = new TableForm();
-            
+
             InitializeComponent();
-            table.AfficherTable(tableChoisis, resume, labelResume, dataGridView1);
+            dataGridView1.Refresh();
+            table.AfficherTable(tableChoisis, dataGridView1, "1");
         }
-        
+
     }
 }

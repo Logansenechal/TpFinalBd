@@ -9,11 +9,13 @@ public class Table
     private SqlDataAdapter dataAdapter;//Crée un objet SqlDataAdapter pour récupérer les données de la base de données
     private DataTable dataTable;//Crée un objet DataTable pour stocker les données
 
+    public Table() { }
+
     //Méthode pour afficher les données d'une table dans un dataGridView
-    public void AfficherTable(string Table, string resume, Label resumeLabel, DataGridView dataGridView)
+    public void AfficherTable(string Table, DataGridView dataGridView, string condition)
     {
         //string de connection à la base de données
-        string connectionString = "Server=CL5-WIN10-LS\\SQLEXPRESS;Database=travailpratique2;Integrated Security=True;";
+        string connectionString = "Server=CL5-WIN10-LS\\SQLEXPRESS;Database=TravailPratiqueFinal;Integrated Security=True;";
 
         try
         {
@@ -23,7 +25,7 @@ public class Table
                 connection.Open();
 
                 // Définit la requête SQL
-                string requeteSql = $"SELECT * FROM {Table}";
+                string requeteSql = $"SELECT * FROM {Table} Where {condition}";
 
                 //Crée une instance de SqlDataAdapter pour exécuter la requête et récupérer les données
                 dataAdapter = new SqlDataAdapter(requeteSql, connection);
@@ -34,8 +36,7 @@ public class Table
 
                 // Lier le DataGridView au DataTable
                 dataGridView.DataSource = dataTable;
-                //Affiche le résumé de la requête dans resumeLabel 
-                resumeLabel.Text = resume;
+                
             }
 
 
